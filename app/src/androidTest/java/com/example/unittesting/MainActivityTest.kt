@@ -5,7 +5,6 @@ package com.example.unittesting
 import android.content.Intent
 import androidx.test.espresso.Espresso.onView
 import androidx.test.espresso.action.ViewActions.click
-import androidx.test.espresso.action.ViewActions.typeText
 import androidx.test.espresso.assertion.ViewAssertions.matches
 import androidx.test.espresso.intent.Intents
 import androidx.test.espresso.intent.Intents.intended
@@ -32,7 +31,6 @@ class MainActivityTest {
             .perform(click()) // Act
         onView(withId(R.id.btnNext)).perform(click())
         onView(withId(R.id.btnNext)).perform(click())
-        onView(withId(R.id.btnNext)).perform(typeText("hello there"))
         onView(
             withId(R.id.quoteText),
         ).check(matches(withText("Success is not final, failure is not fatal: It is the courage to continue that counts."))) // Assert
