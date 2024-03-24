@@ -71,4 +71,9 @@ dependencies {
     debugImplementation("androidx.compose.ui:ui-test-manifest")
     implementation("com.google.code.gson:gson:2.10.1")
     implementation("androidx.constraintlayout:constraintlayout:2.1.4")
+    androidTestImplementation("androidx.test:core:1.5.0-rc01")
+    androidTestImplementation("androidx.test:core-ktx:1.5.0-rc01")
+    androidTestImplementation("androidx.test.ext:junit-ktx:1.1.4-rc01")
+    androidTestImplementation("androidx.test:runner:1.5.0-rc01")
+    androidTestImplementation("androidx.test.espresso:espresso-intents:3.5.0-rc01")
 }
