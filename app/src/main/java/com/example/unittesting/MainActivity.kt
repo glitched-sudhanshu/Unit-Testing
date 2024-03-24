@@ -1,47 +1,52 @@
 package com.example.unittesting
 
+import android.content.Intent
 import android.os.Bundle
-import androidx.activity.ComponentActivity
-import androidx.activity.compose.setContent
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.Surface
-import androidx.compose.material3.Text
-import androidx.compose.runtime.Composable
-import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
-import com.example.unittesting.ui.theme.UnitTestingTheme
+import android.view.View
+import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.ViewModelProvider
+import androidx.lifecycle.viewmodel.initializer
+import androidx.lifecycle.viewmodel.viewModelFactory
+import com.example.unittesting.utils.Quote
 
-class MainActivity : ComponentActivity() {
+class MainActivity : AppCompatActivity() {
+    lateinit var mainViewModel: MainViewModel
+    private val quoteText: TextView
+        get() = findViewById(R.id.quoteText)
+    private val quoteAuthor: TextView
+        get() = findViewById(R.id.quoteAuthor)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContent {
-            UnitTestingTheme {
-                // A surface container using the 'background' color from the theme
-                Surface(
-                    modifier = Modifier.fillMaxSize(),
-                    color = MaterialTheme.colorScheme.background
-                ) {
-                    Greeting("Android")
+        setContentView(R.layout.activity_main)
+        val factory: ViewModelProvider.Factory =
+            viewModelFactory {
+                initializer {
+                    MainViewModel(applicationContext)
                 }
             }
-        }
+        mainViewModel = ViewModelProvider(this, factory).get(MainViewModel::class.java)
+        setQuote(mainViewModel.getQuote())
     }
-}
 
-@Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier
-    )
-}
+    fun setQuote(quote: Quote) {
+        quoteText.text = quote.quote
+        quoteAuthor.text = quote.author
+    }
 
-@Preview(showBackground = true)
-@Composable
-fun GreetingPreview() {
-    UnitTestingTheme {
-        Greeting("Android")
+    fun onPrevious(view: View) {
+        setQuote(mainViewModel.previousQuote())
+    }
+
+    fun onNext(view: View) {
+        setQuote(mainViewModel.nextQuote())
+    }
+
+    fun onShare(view: View) {
+        val intent = Intent(Intent.ACTION_SEND)
+        intent.setType("text/plain")
+        intent.putExtra(Intent.EXTRA_TEXT, mainViewModel.getQuote().quote)
+        startActivity(intent)
     }
 }
