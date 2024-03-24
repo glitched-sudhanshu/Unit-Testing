@@ -15,4 +15,20 @@ class Helper {
         }
         return true
     }
+
+    fun validatePassword(input: String): String {
+        return if (input.isNotBlank() && input.length >= 6 && input.length <= 15) {
+            input
+        } else {
+            "wrong"
+        }
+    }
+
+    fun reverseString(input: String): String {
+        var rev = ""
+        for (i in input.length - 1 downTo 0) {
+            rev += input[i]
+        }
+        return rev
+    }
 }
