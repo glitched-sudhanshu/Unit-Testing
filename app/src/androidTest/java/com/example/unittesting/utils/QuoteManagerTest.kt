@@ -15,7 +15,7 @@ class QuoteManagerTest {
     private lateinit var quoteManager: QuoteManager
     private lateinit var context: Context
     private val quotes =
-        arrayOf(Quote("hello", "0"), Quote("bye bye", "1"))
+        arrayOf(Quote(1, "hello", "0"), Quote(2, "bye bye", "1"))
 
     @Before
     fun setUp() {

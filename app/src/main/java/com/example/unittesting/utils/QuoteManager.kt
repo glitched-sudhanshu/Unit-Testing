@@ -1,9 +1,17 @@
 package com.example.unittesting.utils
 
 import android.content.Context
+import androidx.room.Entity
+import androidx.room.PrimaryKey
 import com.google.gson.Gson
 
-data class Quote(val quote: String, val author: String)
+@Entity
+data class Quote(
+    @PrimaryKey(autoGenerate = true)
+    val id: Int,
+    val quote: String,
+    val author: String,
+)
 
 class QuoteManager() {
     var quotes = emptyArray<Quote>()
