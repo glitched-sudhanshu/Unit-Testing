@@ -92,4 +92,7 @@ dependencies {
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.4")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.4")
     androidTestImplementation("app.cash.turbine:turbine:0.12.1")
+
+    testImplementation("org.mockito:mockito-core:4.0.0")
+    testImplementation("com.nhaarman:mockitokotlin2:mockito-kotlin:2.2.0")
 }
