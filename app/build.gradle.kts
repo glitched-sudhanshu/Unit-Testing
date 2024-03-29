@@ -94,5 +94,6 @@ dependencies {
     androidTestImplementation("app.cash.turbine:turbine:0.12.1")
 
     testImplementation("org.mockito:mockito-core:4.0.0")
-    testImplementation("com.nhaarman:mockitokotlin2:mockito-kotlin:2.2.0")
+    // Optional -- mockito-kotlin
+    testImplementation("org.mockito.kotlin:mockito-kotlin:4.0.0")
 }
