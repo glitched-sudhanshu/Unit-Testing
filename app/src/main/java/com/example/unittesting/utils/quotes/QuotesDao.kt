@@ -1,4 +1,4 @@
-package com.example.unittesting.utils
+package com.example.unittesting.utils.quotes
 
 import androidx.lifecycle.LiveData
 import androidx.room.Dao

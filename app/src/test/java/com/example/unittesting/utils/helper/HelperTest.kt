@@ -1,6 +1,6 @@
 @file:Suppress("ktlint:standard:no-wildcard-imports")
 
-package com.example.unittesting.utils
+package com.example.unittesting.utils.helper
 
 import org.junit.After
 import org.junit.Assert.*

@@ -1,4 +1,4 @@
-package com.example.unittesting.utils
+package com.example.unittesting.utils.helper
 
 // ctrl + shift + t -> for test
 // alt + ins -> options (inc test)

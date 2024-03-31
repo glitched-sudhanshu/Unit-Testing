@@ -1,8 +1,9 @@
-package com.example.unittesting.utils
+package com.example.unittesting.utils.quotes
 
 import androidx.arch.core.executor.testing.InstantTaskExecutorRule
 import androidx.room.Room
 import androidx.test.core.app.ApplicationProvider
+import com.example.unittesting.utils.getOrAwaitValue
 import junit.framework.TestCase.assertEquals
 import kotlinx.coroutines.runBlocking
 import org.junit.After

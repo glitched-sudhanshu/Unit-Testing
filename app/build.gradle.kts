@@ -36,6 +36,7 @@ android {
     }
     kotlinOptions {
         jvmTarget = "17"
+        freeCompilerArgs = listOf("-Xjvm-default=compatibility")
     }
     buildFeatures {
         compose = true
@@ -98,4 +99,15 @@ dependencies {
 
     implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.1")
     testImplementation("org.jetbrains.kotlinx:kotlinx-coroutines-test:1.6.4")
+
+    implementation("com.github.bumptech.glide:glide:4.12.0")
+    kapt("com.github.bumptech.glide:compiler:4.12.0")
+
+    testImplementation("com.squareup.okhttp3:mockwebserver:4.9.0")
+
+    implementation("com.squareup.retrofit2:retrofit:2.9.0")
+    implementation("com.squareup.okhttp3:okhttp:4.7.2")
+    implementation("com.squareup.okhttp3:logging-interceptor:4.7.2")
+    implementation("com.squareup.retrofit2:converter-gson:2.9.0")
+    implementation("com.google.code.gson:gson:2.8.6")
 }

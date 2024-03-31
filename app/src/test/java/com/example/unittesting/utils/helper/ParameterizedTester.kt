@@ -1,4 +1,4 @@
-package com.example.unittesting.utils
+package com.example.unittesting.utils.helper
 
 import org.junit.Assert.assertEquals
 import org.junit.Test

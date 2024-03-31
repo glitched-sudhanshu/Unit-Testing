@@ -1,4 +1,4 @@
-package com.example.unittesting.utils
+package com.example.unittesting.utils.quotes
 
 import android.content.Context
 import androidx.room.Entity

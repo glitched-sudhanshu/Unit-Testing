@@ -2,7 +2,7 @@ package com.example.unittesting
 
 import android.content.Context
 import androidx.lifecycle.ViewModel
-import com.example.unittesting.utils.Quote
+import com.example.unittesting.utils.quotes.Quote
 import com.google.gson.Gson
 
 class MainViewModel(val context: Context) : ViewModel() {

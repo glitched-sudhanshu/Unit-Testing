@@ -1,6 +1,6 @@
 @file:Suppress("ktlint:standard:no-wildcard-imports")
 
-package com.example.unittesting.utils
+package com.example.unittesting.utils.quotes
 
 import android.content.Context
 import android.util.Log

@@ -8,7 +8,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.viewmodel.initializer
 import androidx.lifecycle.viewmodel.viewModelFactory
-import com.example.unittesting.utils.Quote
+import com.example.unittesting.utils.quotes.Quote
 
 class MainActivity : AppCompatActivity() {
     lateinit var mainViewModel: MainViewModel
