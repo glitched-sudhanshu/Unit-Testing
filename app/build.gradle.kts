@@ -94,6 +94,8 @@ dependencies {
     androidTestImplementation("app.cash.turbine:turbine:0.12.1")
 
     testImplementation("org.mockito:mockito-core:4.0.0")
-    // Optional -- mockito-kotlin
     testImplementation("org.mockito.kotlin:mockito-kotlin:4.0.0")
+
+    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.1")
+    testImplementation("org.jetbrains.kotlinx:kotlinx-coroutines-test:1.6.4")
 }
