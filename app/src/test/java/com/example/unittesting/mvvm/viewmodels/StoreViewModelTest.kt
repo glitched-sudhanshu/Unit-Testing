@@ -26,7 +26,7 @@ class StoreViewModelTest {
     val instantTaskExecutorRule = InstantTaskExecutorRule()
 
     @Mock
-    lateinit var productRepository: ProductRepository
+    private lateinit var productRepository: ProductRepository
 
     private lateinit var sut: StoreViewModel
 
