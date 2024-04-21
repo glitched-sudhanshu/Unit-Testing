@@ -109,5 +109,6 @@ class ProductRepositoryTest {
 
     @After
     fun tearDown() {
+        mockWebServer.shutdown()
     }
 }
